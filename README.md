@@ -10,9 +10,9 @@ Kudos to: https://github.com/zacharyfox/RMonitorLeaderboard (GPL license)
 
 ## Sample processors
 
- * Find empty catch blocks: _CatchProcessor_
- * Add _@NotNull_ annotation to every Object parameter: _NotNullParameterProcessor_
- * Add not null pre-condition checks to every Object parameter: _NotNullCheckAdderProcessor__
+ * Find empty catch blocks: `CatchProcessor`
+ * Add _@NotNull_ annotation to every Object parameter: `NotNullParameterProcessor`
+ * Add not null pre-condition checks to every Object parameter: `NotNullCheckAdderProcessor`
  * Find more examples here: https://github.com/SpoonLabs/spoon-examples
  
 ## Usage
