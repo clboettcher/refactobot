@@ -2,7 +2,9 @@
 
 # RefactoBot: Saving legacy system's lives
 
-First sketch of a refactoring robot based on the fabulous [Spoon](http://spoon.gforge.inria.fr) code transformation library. 
+First sketch of a refactoring robot based on the fabulous [Spoon](http://spoon.gforge.inria.fr) code transformation library.
+
+<p align="center"><img src="refactobot.png" alt="RefactoBot" width="400" border="0" /></p>
 
 ## Sample application
 
