@@ -1,0 +1,37 @@
+group 'de.qaware.refactobot'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'spoon'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'http://spoon.gforge.inria.fr/repositories/releases' }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven { url 'http://spoon.gforge.inria.fr/repositories/' }
+    }
+    dependencies {
+        classpath group: 'fr.inria.gforge.spoon',
+                name: 'spoon-gradle-plugin',
+                version:'1.0-SNAPSHOT'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'com.miglayout', name: 'miglayout', version: '3.7.4'
+    compile 'fr.inria.gforge.spoon:spoon-core:5.4.0'
+    compile 'de.qaware.refactobot.bot:1.0-SNAPSHOT'
+}
+
+spoon {
+    preserveFormatting = true
+    processors = ['de.qaware.refactobot.CatchProcessor']
+}
