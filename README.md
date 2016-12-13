@@ -21,8 +21,8 @@ Kudos to: https://github.com/zacharyfox/RMonitorLeaderboard (GPL license)
 
 Use the following bash commands to run the refactoring example (tested on macOS ony):
 
- * `./viz.sh` to visualize the model for a sample Java file according the Spoon meta model
- * `./generate.sh` to transform the code with all given processors and re-format code according google's java coding style 
+ * `./viz.sh` to visualize the model for a sample Java file according to the Spoon meta model
+ * `./generate.sh` to transform the code with all given processors and re-format it according google's java coding style 
 
 ## License
 
