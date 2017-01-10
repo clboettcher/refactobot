@@ -1,5 +1,8 @@
 *.class
 
+# IntelliJ
+.idea/
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -16,5 +19,4 @@ hs_err_pid*
 /sample/target/
 /refactobot.iws
 /refactobot.ipr
-/.idea/*
 /spooned/*
