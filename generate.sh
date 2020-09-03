@@ -22,7 +22,7 @@ mkdir -p "$OUTPUT_DIR"
 # Transform source code with given processors
 echo " > generate sources"
 
-java -classpath "$SRC_DIR/bot/target/bot-1.0-SNAPSHOT.jar${CP_SEP}$SRC_DIR/bin/spoon-core-5.4.0-jar-with-dependencies.jar" \
+java -classpath "$SRC_DIR/bot/target/bot-1.0-SNAPSHOT.jar${CP_SEP}$SRC_DIR/bin/spoon-core-8.2.0-jar-with-dependencies.jar" \
     spoon.Launcher \
     -i "$SRC_DIR/sample/src/main/java" \
     -o "$OUTPUT_DIR" \
