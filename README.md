@@ -1,29 +1,36 @@
-![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
+# LEAP Spoon Refactoring
 
-# RefactoBot: Saving legacy system's lives
+## About
 
-First sketch of a refactoring robot based on the fabulous [Spoon](http://spoon.gforge.inria.fr) code transformation library.
+Applies code refactorings powered by spoon.
 
-<p align="center"><img src="refactobot.png" alt="RefactoBot" width="400" border="0" /></p>
-
-## Sample application
-
-Kudos to: https://github.com/zacharyfox/RMonitorLeaderboard (GPL license)
-
-## Sample processors
-
- * Find empty catch blocks: `CatchProcessor`
- * Add _@NotNull_ annotation to every Object parameter: `NotNullParameterProcessor`
- * Add not null pre-condition checks to every Object parameter: `NotNullCheckAdderProcessor`
- * Find more examples here: https://github.com/SpoonLabs/spoon-examples
- 
 ## Usage
 
-Use the following bash commands to run the refactoring example (tested on macOS ony):
+###  Running [JsfRefactoringProcessor.java](bot/src/main/java/de/allianz/leap/spoon/JsfRefactoringProcessor.java)
 
- * `./viz.sh` to visualize the model for a sample Java file according to the Spoon meta model
- * `./generate.sh` to transform the code with all given processors and re-format it according google's java coding style 
+Create IntelliJ Java application run config:
 
-## License
+- classpath of module `bot` []()
+- main class `spoon.Launcher`
+- arguments
 
-This software is provided under the MIT open source license, read the `LICENSE` file for details.
+Given the code you with to transform is stored in env variable `TARGET` and
+this repo is checked out under env variable `SPOON`. (Output is written to `${TARGET}/spooned`.
+
+```
+--input $TARGET/src/main/java 
+--output $TARGET/spooned 
+--template $SPOON/bot/src/main/java/de/allianz/leap/spoon/template
+-p "de.allianz.leap.spoon.JsfRefactoringProcessor" 
+--enable-comments 
+--with-imports 
+--level WARN 
+```
+
+### Show Spoon Meta Model in UI
+
+```
+java -cp "/path/to/spoon-core-8.2.0-jar-with-dependencies.jar" spoon.Launcher 
+    --input "/path/to/my/JavaClass.java" 
+    --gui 
+```

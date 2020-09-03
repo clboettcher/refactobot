@@ -1,6 +1,6 @@
-package de.qaware.refactobot;
+package de.allianz.leap.spoon;
 
-import de.qaware.refactobot.field.template.GetterTemplate;
+import de.allianz.leap.spoon.template.GetterTemplate;
 import org.apache.commons.lang3.StringUtils;
 import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.*;

@@ -1,4 +1,4 @@
-package de.qaware.refactobot.field.template;
+package de.allianz.leap.spoon.template;
 
 import spoon.template.Parameter;
 import spoon.template.StatementTemplate;
